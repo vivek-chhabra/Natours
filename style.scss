@@ -4,6 +4,8 @@
 $light-color: #2d3334;
 $medium-green-color: #55c57a;
 $dark-color: #002a2b;
+$primary-light-color: #589697fd;
+$primary-dark-color: #0a767bfd;
 
 *,
 *::after,
@@ -44,6 +46,12 @@ body {
     cursor: pointer;
 }
 
+.container {
+    max-width: 1150px;
+    width: 100%;
+    margin-inline: auto;
+}
+
 /* utility classes end */
 
 .header {
@@ -51,6 +59,7 @@ body {
     background-size: cover;
     background-position: top;
     height: 95vh;
+    z-index: 1;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     text-align: center;
 
@@ -68,8 +77,11 @@ body {
         }
 
         i {
-            font-size: 2.4rem;
-            color: white;
+            font-size: 2rem;
+            color: #002a2b;
+            padding: 10px 10px 10px 11px;
+            background-color: white;
+            border-radius: 50%;
         }
     }
 
@@ -157,5 +169,114 @@ body {
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+// section-1
+
+main {
+    background-color: #f7f7f7;
+    margin-top: -25vh;
+    min-height: 500px;
+    padding-inline: 10px;
+
+    .sec-1 {
+        color: black;
+        font-size: 1.6rem;
+
+        h1 {
+            margin: 250px 0 5rem 0;
+            width: fit-content;
+            margin-inline: auto;
+            font-weight: 800;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, $primary-light-color, $primary-dark-color);
+            -webkit-background-clip: text;
+            color: transparent;
+
+            &:hover {
+                transform: skewY(2deg) skewX(15deg) scale(1.1);
+                cursor: default;
+            }
+        }
+
+        .content {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            gap: 2rem;
+            font-weight: 800;
+            color: #2e4a4a;
+            font-size: 2rem;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            .left {
+                gap: 1rem;
+                max-width: 550px;
+                .btn {
+                    color: #ffffff !important;
+                    background: linear-gradient(to right, #589697, #0a757b);
+                    padding: 10px 15px 11px 15px;
+                    width: fit-content;
+                    font-size: 1.7rem;
+                    border-radius: 3px;
+                    margin-top: 3rem;
+                    background-color: rgba(0, 0, 0, 0.491);
+                    &:hover {
+                        background: url("./images/nat-3.jpg");
+                        background-blend-mode: darken;
+                        background-color: rgba(0, 0, 0, 0.491);
+                        background-position: center;
+                        background-size: cover;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .left .text {
+                color: #6b8f90;
+                font-size: 1.6rem;
+                font-weight: 600;
+                letter-spacing: 1px;
+                line-height: 2.2rem;
+            }
+            .btn {
+                margin-top: 1rem;
+            }
+            .right {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                right: 5rem;
+                img {
+                    position: absolute;
+                    right: 0;
+                    bottom: -60px;
+                    border-radius: 0.5rem;
+                    box-shadow: 1.5rem 1.5rem 4rem rgb(88, 88, 88);
+                    &:last-child {
+                        box-shadow: 0rem 1.5rem 4rem rgb(88, 88, 88);
+                    }
+                    &:not(:last-child):hover {
+                        box-shadow: 1.5rem 0rem 10rem rgb(88, 88, 88) !important;
+                    }
+                    &:hover {
+                        scale: 1.05;
+                        z-index: 5;
+                        transform: translateY(-1rem);
+                    }
+                }
+                .img-1 {
+                    right: 8rem;
+                }
+                .img-2 {
+                    left: -15rem;
+                    top: -8rem;
+                }
+                .img-3 {
+                    top: -1rem;
+                }
+            }
+        }
     }
 }
