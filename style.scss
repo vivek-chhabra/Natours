@@ -2,7 +2,6 @@
 
 // variables
 $light-color: #2d3334;
-$medium-green-color: #55c57a;
 $dark-color: #002a2b;
 $primary-light-color: #589697fd;
 $primary-dark-color: #0a767bfd;
@@ -13,7 +12,7 @@ $primary-dark-color: #0a767bfd;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    transition: 0.2s ease;
+    transition: 0.2s steps(100);
     position: relative;
 }
 
@@ -80,8 +79,11 @@ body {
             font-size: 2rem;
             color: #002a2b;
             padding: 10px 10px 10px 11px;
-            background-color: white;
+            background-color: rgb(138, 89, 89);
             border-radius: 50%;
+            position: fixed;
+            right: 65px;
+            z-index: 100;
         }
     }
 
@@ -174,31 +176,36 @@ body {
 
 // section-1
 
+@mixin text-gradient {
+    font-weight: 800;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, $primary-light-color, $primary-dark-color);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        cursor: default;
+    }
+}
+
 main {
     background-color: #f7f7f7;
-    margin-top: -25vh;
+    margin-top: -30vh;
     min-height: 500px;
-    padding-inline: 10px;
 
     .sec-1 {
         color: black;
         font-size: 1.6rem;
+        margin-bottom: 250px;
+        padding-inline: 10px;
 
         h1 {
             margin: 250px 0 5rem 0;
             width: fit-content;
             margin-inline: auto;
-            font-weight: 800;
-            font-size: 3.5rem;
-            letter-spacing: 2px;
-            background: linear-gradient(to right, $primary-light-color, $primary-dark-color);
-            -webkit-background-clip: text;
-            color: transparent;
-
-            &:hover {
-                transform: skewY(2deg) skewX(15deg) scale(1.1);
-                cursor: default;
-            }
+            @include text-gradient;
         }
 
         .content {
@@ -276,6 +283,59 @@ main {
                 .img-3 {
                     top: -1rem;
                 }
+            }
+        }
+    }
+}
+
+// features section
+
+.features {
+    width: 100%;
+    margin-top: -15rem;
+    background-size: cover;
+    height: 110vh !important;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right bottom, rgba($light-color, 0.8), rgba($dark-color, 0.8)), url("./images/nat-4.jpg");
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+
+    .container {
+        gap: 4rem;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .feature {
+            gap: 2rem;
+            max-width: 25rem;
+            background-color: white;
+            text-align: center;
+            padding: 2.3rem 1.5rem;
+            border-radius: 5px;
+
+            i {
+                width: fit-content;
+                color: transparent;
+                margin-inline: auto;
+                -webkit-background-clip: text;
+                background: linear-gradient(to right, $primary-light-color, $primary-dark-color);
+            }
+
+            .head {
+                font-size: 1.6rem;
+                color: #2e4a4a;
+                font-weight: 600;
+            }
+
+            .text {
+                font-size: 1.5rem;
+                color: #0a757b;
+            }
+
+            &:hover {
+                transform: translateY(-0.3rem) scale(1.03);
+                cursor: default;
             }
         }
     }
