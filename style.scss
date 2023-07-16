@@ -6,6 +6,44 @@ $dark-color: #002a2b;
 $primary-light-color: #589697fd;
 $primary-dark-color: #0a767bfd;
 
+// extends
+@mixin text-gradient {
+    font-weight: 800;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    width: fit-content;
+    margin-inline: auto;
+    background: linear-gradient(to right, $primary-light-color, $primary-dark-color);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        cursor: default;
+    }
+}
+
+@mixin gradient-button($url) {
+    color: #ffffff !important;
+    background: linear-gradient(to right, #589697, #0a757b);
+    padding: 8px 11px 7px 11px;
+    width: fit-content;
+    font-size: 1.7rem;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.491);
+    &:hover {
+        background: url(#{$url});
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.491);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+}
+
 *,
 *::after,
 *::before {
@@ -79,7 +117,7 @@ body {
             font-size: 2rem;
             color: #002a2b;
             padding: 10px 10px 10px 11px;
-            background-color: rgb(138, 89, 89);
+            background-color: rgb(255, 255, 255);
             border-radius: 50%;
             position: fixed;
             right: 65px;
@@ -105,6 +143,7 @@ body {
             letter-spacing: 1.8rem;
             font-size: 1.6rem;
             animation: slide2 1.2s ease 1 forwards;
+            right: 7px;
         }
 
         .btn {
@@ -176,20 +215,6 @@ body {
 
 // section-1
 
-@mixin text-gradient {
-    font-weight: 800;
-    font-size: 3.5rem;
-    letter-spacing: 2px;
-    background: linear-gradient(to right, $primary-light-color, $primary-dark-color);
-    -webkit-background-clip: text;
-    color: transparent;
-
-    &:hover {
-        transform: skewY(2deg) skewX(15deg) scale(1.1);
-        cursor: default;
-    }
-}
-
 main {
     background-color: #f7f7f7;
     margin-top: -30vh;
@@ -203,17 +228,15 @@ main {
 
         h1 {
             margin: 250px 0 5rem 0;
-            width: fit-content;
-            margin-inline: auto;
             @include text-gradient;
         }
 
         .content {
-            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
             gap: 2rem;
             font-weight: 800;
             color: #2e4a4a;
-            font-size: 2rem;
+            font-size: 1.8rem;
             width: 100%;
             justify-content: space-between;
             align-items: center;
@@ -222,22 +245,7 @@ main {
                 gap: 1rem;
                 max-width: 550px;
                 .btn {
-                    color: #ffffff !important;
-                    background: linear-gradient(to right, #589697, #0a757b);
-                    padding: 10px 15px 11px 15px;
-                    width: fit-content;
-                    font-size: 1.7rem;
-                    border-radius: 3px;
-                    margin-top: 3rem;
-                    background-color: rgba(0, 0, 0, 0.491);
-                    &:hover {
-                        background: url("./images/nat-3.jpg");
-                        background-blend-mode: darken;
-                        background-color: rgba(0, 0, 0, 0.491);
-                        background-position: center;
-                        background-size: cover;
-                        cursor: pointer;
-                    }
+                    @include gradient-button("./images/nat-3.jpg");
                 }
             }
             .left .text {
@@ -251,7 +259,6 @@ main {
                 margin-top: 1rem;
             }
             .right {
-                position: relative;
                 display: flex;
                 flex-direction: column;
                 right: 5rem;
@@ -290,7 +297,7 @@ main {
 
 // features section
 
-.features {
+.features-section {
     width: 100%;
     margin-top: -15rem;
     background-size: cover;
@@ -300,7 +307,7 @@ main {
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 
     .container {
-        gap: 4rem;
+        gap: 5rem;
         width: 100%;
         height: 100%;
         justify-content: center;
@@ -313,19 +320,18 @@ main {
             text-align: center;
             padding: 2.3rem 1.5rem;
             border-radius: 5px;
+            height: 270px;
 
             i {
-                width: fit-content;
-                color: transparent;
-                margin-inline: auto;
-                -webkit-background-clip: text;
-                background: linear-gradient(to right, $primary-light-color, $primary-dark-color);
+                font-size: 5rem;
+                color: $primary-dark-color;
+                margin-bottom: 1.7rem;
             }
 
             .head {
-                font-size: 1.6rem;
+                font-size: 1.7rem;
                 color: #2e4a4a;
-                font-weight: 600;
+                font-weight: 800;
             }
 
             .text {
@@ -336,6 +342,123 @@ main {
             &:hover {
                 transform: translateY(-0.3rem) scale(1.03);
                 cursor: default;
+            }
+        }
+    }
+}
+
+// tours section
+
+.tours-section {
+    .container {
+        gap: 6rem;
+        color: #002a2b;
+
+        .head {
+            @include text-gradient;
+        }
+
+        .bottom-btn {
+            @include gradient-button("./images/nat-6-small.jpg");
+            padding-inline: 20px;
+            padding-block: 10px;
+            padding-top: 12px;
+            margin-inline: auto;
+        }
+
+        .tour-cards {
+            gap: 5rem;
+            font-size: 1.4rem;
+            justify-content: center;
+            align-items: center;
+            .tour {
+                perspective: 150rem;
+                .tour-card {
+                    box-shadow: 1rem 1rem 4rem gray;
+                    border-radius: 10px;
+                }
+                .front-side {
+                    backface-visibility: hidden;
+                    max-width: 32rem;
+                    text-align: center;
+                    transition: all 0.8s ease;
+
+                    img {
+                        background-blend-mode: darken;
+                        background-color: #35fcff;
+                        width: 100%;
+                        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                        border-radius: 10px 10px 0px 0px;
+                    }
+                }
+                .back-side {
+                    backface-visibility: hidden;
+                    height: 100%;
+                    width: 100%;
+                    transition: all 0.8s ease;
+                    transform: rotateY(180deg);
+                    position: absolute;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    color: white;
+
+                    p {
+                        font-size: 1.6rem;
+                        font-weight: 800;
+                    }
+
+                    .price {
+                        font-size: 5rem;
+                    }
+
+                    .btn {
+                        padding: 14px 20px 12px 20px;
+                        border-radius: 5px;
+                        background-color: white;
+                        color: #002a2b;
+                        font-weight: 800;
+                        font-size: 1.5rem;
+                        top: 5rem;
+                    }
+
+                    .btn:hover {
+                        cursor: pointer;
+                        background-color: rgb(236, 236, 236);
+                    }
+
+                    & > * {
+                        bottom: 5rem;
+                    }
+                }
+
+                &:hover .front-side {
+                    transform: rotateY(-180deg);
+                }
+
+                &:hover .back-side {
+                    transform: rotateY(0deg);
+                }
+
+                .tour-info {
+                    padding: 2rem 3rem;
+                    font-weight: 800;
+                    color: #334f50;
+                    font-size: 1.5rem;
+
+                    hr {
+                        margin-block: 10px;
+                    }
+                }
+            }
+            #tour-1 .back-side {
+                background: linear-gradient(to bottom right, #ffb743, #ff6200);
+            }
+            #tour-2 .back-side {
+                background: linear-gradient(to bottom right, #82cd6b, #287d00);
+            }
+            #tour-3 .back-side {
+                background: linear-gradient(to bottom right, #6aa3cc, #074978);
             }
         }
     }
