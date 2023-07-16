@@ -26,7 +26,7 @@ $primary-dark-color: #0a767bfd;
 @mixin gradient-button($url) {
     color: #ffffff !important;
     background: linear-gradient(to right, #589697, #0a757b);
-    padding: 8px 11px 7px 11px;
+    padding: 12px 20px 12px 20px;
     width: fit-content;
     font-size: 1.7rem;
     border-radius: 3px;
@@ -60,7 +60,7 @@ html {
 
 body {
     padding: 30px;
-    font-family: "El Messiri", sans-serif;
+    font-family: "Marcellus", serif;
     color: white;
     background-color: #ffffff;
     a {
@@ -99,6 +99,7 @@ body {
     z-index: 1;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     text-align: center;
+    font-family: "El Messiri", sans-serif;
 
     .nav {
         width: 100%;
@@ -235,7 +236,7 @@ main {
             // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
             gap: 2rem;
             font-weight: 800;
-            color: #2e4a4a;
+            color: #004e50;
             font-size: 1.8rem;
             width: 100%;
             justify-content: space-between;
@@ -249,9 +250,9 @@ main {
                 }
             }
             .left .text {
-                color: #6b8f90;
+                color: #334F50;
                 font-size: 1.6rem;
-                font-weight: 600;
+                font-weight: 500;
                 letter-spacing: 1px;
                 line-height: 2.2rem;
             }
@@ -336,7 +337,7 @@ main {
 
             .text {
                 font-size: 1.5rem;
-                color: #0a757b;
+                color: #334F50;
             }
 
             &:hover {
@@ -401,6 +402,7 @@ main {
                     justify-content: center;
                     align-items: center;
                     gap: 20px;
+                    font-family: "El Messiri", sans-serif;
                     color: white;
 
                     p {
@@ -459,6 +461,116 @@ main {
             }
             #tour-3 .back-side {
                 background: linear-gradient(to bottom right, #6aa3cc, #074978);
+            }
+        }
+    }
+}
+
+// testimony section
+
+.testimony-section {
+    padding-block: 8rem;
+    video {
+        width: 100%;
+        position: absolute;
+        opacity: 30%;
+    }
+
+    .container {
+        gap: 5rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+
+        h1 {
+            @include text-gradient;
+            color: transparent;
+            background: linear-gradient(to right, rgb(0, 90, 101), rgb(0, 52, 75));
+            -webkit-background-clip: text; 
+        }
+
+        .btn {
+            display: flex;
+            gap: 10px;
+            backface-visibility: hidden;
+            @include gradient-button("./images/nat-10-small.jpg");
+        }
+
+        .testimonies {
+            gap: 5rem;
+
+            #testimony-2 {
+                .img {
+                    width: 37rem;
+                }
+            }
+
+            .testimony {
+                height: 25rem;
+                max-width: 80rem;
+                gap: 2rem;
+                color: #0a757b;
+                font-size: 1.6rem;
+                font-weight: 800;
+                padding: 2.5rem 2rem;
+                align-items: center;
+                padding-inline: 5rem;
+                transform: skewX(-12deg);
+                transition: all 0.5s ease;
+                box-shadow: 0.3rem 0.3rem 3rem rgb(155, 155, 155);
+                background-color: rgba(255, 255, 255, 0.733);
+
+                & > * {
+                    transform: skewX(12deg);
+                }
+
+                .img {
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    overflow: hidden;
+                    height: 14rem;
+                    width: 28rem;
+
+                    img {
+                        border-radius: 50%;
+                        width: 104rem;
+                        height: 14rem;
+                        object-fit: cover;
+                        transform: scale(1.2);
+                    }
+
+                    .caption {
+                        position: absolute;
+                        color: white;
+                        font-size: 1.4rem;
+                        transform: translateY(7rem);
+                        opacity: 0;
+                    }
+                }
+
+                &:hover .img {
+                    img {
+                        filter: blur(0.3rem) brightness(0.95);
+                        transform: scale(1);
+                    }
+                    .caption {
+                        transform: translateY(0rem);
+                        opacity: 1;
+                    }
+                }
+
+                .text {
+                    justify-content: center;
+                    gap: 20px;
+                    .head {
+                        font-size: 1.8rem;
+                        color: #002a2b;
+                    }
+                }
             }
         }
     }

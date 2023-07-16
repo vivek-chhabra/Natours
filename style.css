@@ -13,7 +13,7 @@ html {
 
 body {
   padding: 30px;
-  font-family: "El Messiri", sans-serif;
+  font-family: "Marcellus", serif;
   color: white;
   background-color: #ffffff; }
   body a {
@@ -43,7 +43,8 @@ body {
   height: 95vh;
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-  text-align: center; }
+  text-align: center;
+  font-family: "El Messiri", sans-serif; }
   .header .nav {
     width: 100%;
     display: flex;
@@ -152,7 +153,7 @@ main {
     main .sec-1 .content {
       gap: 2rem;
       font-weight: 800;
-      color: #2e4a4a;
+      color: #004e50;
       font-size: 1.8rem;
       width: 100%;
       justify-content: space-between;
@@ -163,7 +164,7 @@ main {
         main .sec-1 .content .left .btn {
           color: #ffffff !important;
           background: linear-gradient(to right, #589697, #0a757b);
-          padding: 8px 11px 7px 11px;
+          padding: 12px 20px 12px 20px;
           width: fit-content;
           font-size: 1.7rem;
           border-radius: 3px;
@@ -179,9 +180,9 @@ main {
             background-size: cover;
             cursor: pointer; }
       main .sec-1 .content .left .text {
-        color: #6b8f90;
+        color: #334F50;
         font-size: 1.6rem;
-        font-weight: 600;
+        font-weight: 500;
         letter-spacing: 1px;
         line-height: 2.2rem; }
       main .sec-1 .content .btn {
@@ -244,7 +245,7 @@ main {
         font-weight: 800; }
       .features-section .container .feature .text {
         font-size: 1.5rem;
-        color: #0a757b; }
+        color: #334F50; }
       .features-section .container .feature:hover {
         transform: translateY(-0.3rem) scale(1.03);
         cursor: default; }
@@ -267,7 +268,7 @@ main {
   .tours-section .container .bottom-btn {
     color: #ffffff !important;
     background: linear-gradient(to right, #589697, #0a757b);
-    padding: 8px 11px 7px 11px;
+    padding: 12px 20px 12px 20px;
     width: fit-content;
     font-size: 1.7rem;
     border-radius: 3px;
@@ -317,6 +318,7 @@ main {
         justify-content: center;
         align-items: center;
         gap: 20px;
+        font-family: "El Messiri", sans-serif;
         color: white; }
         .tours-section .container .tour-cards .tour .back-side p {
           font-size: 1.6rem;
@@ -353,3 +355,105 @@ main {
       background: linear-gradient(to bottom right, #82cd6b, #287d00); }
     .tours-section .container .tour-cards #tour-3 .back-side {
       background: linear-gradient(to bottom right, #6aa3cc, #074978); }
+
+.testimony-section {
+  padding-block: 8rem; }
+  .testimony-section video {
+    width: 100%;
+    position: absolute;
+    opacity: 30%; }
+  .testimony-section .container {
+    gap: 5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem; }
+    .testimony-section .container h1 {
+      font-weight: 800;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      width: fit-content;
+      margin-inline: auto;
+      background: linear-gradient(to right, #589697fd, #0a767bfd);
+      -webkit-background-clip: text;
+      color: transparent;
+      color: transparent;
+      background: linear-gradient(to right, #005a65, #00344b);
+      -webkit-background-clip: text; }
+      .testimony-section .container h1:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        cursor: default; }
+    .testimony-section .container .btn {
+      display: flex;
+      gap: 10px;
+      backface-visibility: hidden;
+      color: #ffffff !important;
+      background: linear-gradient(to right, #589697, #0a757b);
+      padding: 12px 20px 12px 20px;
+      width: fit-content;
+      font-size: 1.7rem;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: rgba(0, 0, 0, 0.491); }
+      .testimony-section .container .btn:hover {
+        background: url(./images/nat-10-small.jpg);
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.491);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer; }
+    .testimony-section .container .testimonies {
+      gap: 5rem; }
+      .testimony-section .container .testimonies #testimony-2 .img {
+        width: 37rem; }
+      .testimony-section .container .testimonies .testimony {
+        height: 25rem;
+        max-width: 80rem;
+        gap: 2rem;
+        color: #0a757b;
+        font-size: 1.6rem;
+        font-weight: 800;
+        padding: 2.5rem 2rem;
+        align-items: center;
+        padding-inline: 5rem;
+        transform: skewX(-12deg);
+        transition: all 0.5s ease;
+        box-shadow: 0.3rem 0.3rem 3rem #9b9b9b;
+        background-color: rgba(255, 255, 255, 0.733); }
+        .testimony-section .container .testimonies .testimony > * {
+          transform: skewX(12deg); }
+        .testimony-section .container .testimonies .testimony .img {
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          overflow: hidden;
+          height: 14rem;
+          width: 28rem; }
+          .testimony-section .container .testimonies .testimony .img img {
+            border-radius: 50%;
+            width: 104rem;
+            height: 14rem;
+            object-fit: cover;
+            transform: scale(1.2); }
+          .testimony-section .container .testimonies .testimony .img .caption {
+            position: absolute;
+            color: white;
+            font-size: 1.4rem;
+            transform: translateY(7rem);
+            opacity: 0; }
+        .testimony-section .container .testimonies .testimony:hover .img img {
+          filter: blur(0.3rem) brightness(0.95);
+          transform: scale(1); }
+        .testimony-section .container .testimonies .testimony:hover .img .caption {
+          transform: translateY(0rem);
+          opacity: 1; }
+        .testimony-section .container .testimonies .testimony .text {
+          justify-content: center;
+          gap: 20px; }
+          .testimony-section .container .testimonies .testimony .text .head {
+            font-size: 1.8rem;
+            color: #002a2b; }
