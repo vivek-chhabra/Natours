@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bacasime+Antique&family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&family=El+Messiri:wght@400;600;700;800;900;1000&family=Great+Vibes&family=Libre+Baskerville:wght@400;700&family=Lobster+Two:wght@400;700&family=Marcellus&family=Narnoor&family=Nunito:wght@200;300;400&family=Open+Sans:wght@300;400;500;600;700&family=Sacramento&family=Ysabeau+Infant:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bacasime+Antique&family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&family=El+Messiri:wght@400;600;700&family=Great+Vibes&family=Libre+Baskerville:wght@400;700&family=Lobster+Two:wght@400;700&family=Lumanosimo&family=Marcellus&family=Montserrat:wght@200;300;400;500;600&family=Mulish:wght@300;400;500;600&family=Narnoor&family=Nunito:wght@200;300;400&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600&family=Sacramento&family=Ysabeau+Infant:wght@200;300;400;500;600;700&display=swap");
 
 // variables
-$light-color: #2d3334;
+$light-color: #2f4e54;
 $dark-color: #002a2b;
 $primary-light-color: #589697fd;
 $primary-dark-color: #0a767bfd;
@@ -60,7 +61,7 @@ html {
 
 body {
     padding: 30px;
-    font-family: "Marcellus", serif;
+    font-family: "Poppins", sans-serif;
     color: white;
     background-color: #ffffff;
     a {
@@ -235,7 +236,7 @@ main {
         .content {
             // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
             gap: 2rem;
-            font-weight: 800;
+            font-weight: 600;
             color: #004e50;
             font-size: 1.8rem;
             width: 100%;
@@ -247,12 +248,13 @@ main {
                 max-width: 550px;
                 .btn {
                     @include gradient-button("./images/nat-3.jpg");
+                    font-weight: 500;
                 }
             }
             .left .text {
-                color: #334F50;
-                font-size: 1.6rem;
-                font-weight: 500;
+                color: #426263;
+                font-size: 1.5rem;
+                font-weight: 400;
                 letter-spacing: 1px;
                 line-height: 2.2rem;
             }
@@ -319,9 +321,9 @@ main {
             max-width: 25rem;
             background-color: white;
             text-align: center;
-            padding: 2.3rem 1.5rem;
+            padding: 2.3rem 2rem;
             border-radius: 5px;
-            height: 270px;
+            height: 290px;
 
             i {
                 font-size: 5rem;
@@ -337,7 +339,7 @@ main {
 
             .text {
                 font-size: 1.5rem;
-                color: #334F50;
+                color: #334f50;
             }
 
             &:hover {
@@ -487,7 +489,7 @@ main {
             @include text-gradient;
             color: transparent;
             background: linear-gradient(to right, rgb(0, 90, 101), rgb(0, 52, 75));
-            -webkit-background-clip: text; 
+            -webkit-background-clip: text;
         }
 
         .btn {
@@ -502,7 +504,7 @@ main {
 
             #testimony-2 {
                 .img {
-                    width: 37rem;
+                    width: 43.5rem;
                 }
             }
 
@@ -510,9 +512,9 @@ main {
                 height: 25rem;
                 max-width: 80rem;
                 gap: 2rem;
-                color: #0a757b;
+                color: #426263;
                 font-size: 1.6rem;
-                font-weight: 800;
+                font-weight: 600;
                 padding: 2.5rem 2rem;
                 align-items: center;
                 padding-inline: 5rem;
@@ -533,7 +535,7 @@ main {
                     text-align: center;
                     overflow: hidden;
                     height: 14rem;
-                    width: 28rem;
+                    width: 32.5rem;
 
                     img {
                         border-radius: 50%;
@@ -566,11 +568,113 @@ main {
                 .text {
                     justify-content: center;
                     gap: 20px;
+                    p {
+                        font-weight: 400;
+                    }
                     .head {
                         font-size: 1.8rem;
                         color: #002a2b;
                     }
                 }
+            }
+        }
+    }
+}
+
+// booking section
+
+.booking-section {
+    height: 90vh;
+    margin-top: 5rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, $light-color, $dark-color);
+
+    .container {
+        height: 80%;
+        background: url("./images/nat-4.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        .form {
+            height: 100%;
+            max-width: 60rem;
+            background-color: rgba(255, 255, 255, 0.842);
+            clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 3rem;
+
+            & > * {
+                right: 4rem;
+            }
+
+            .for-name, .for-email {
+                display: none;
+            }
+
+            .option-btn {
+                font-size: 1.6rem;
+                color: #002a2b;
+                font-weight: 600;
+                max-width: 40rem;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            label {
+                gap: 2rem;
+                justify-content: center;
+                align-items: center;
+
+                input {
+                    -ms-transform: scale(1.5); /* IE 9 */
+                    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+                    transform: scale(1.5);
+                }
+            }
+
+            input:not(:nth-child(1)) {
+                max-width: 40rem;
+                padding: 1.2rem 1.5rem;
+                width: 100%;
+                border: none;
+                border-bottom: 3px solid #0e353700;
+                outline: none;
+                font-size: 1.5rem;
+
+                &:focus {
+                    border-bottom: 3px solid #38626b;
+                }
+            }
+
+            .btn {
+                @include gradient-button("");
+                width: 100%;
+                max-width: 40rem;
+                background: linear-gradient(to right, $primary-light-color, $primary-dark-color);
+                margin-top: 3rem;
+                justify-content: center;
+                font-weight: 600;
+
+                &:hover {
+                    background: linear-gradient(to right, $primary-light-color, $primary-dark-color);
+
+                    i {
+                        translate: 1rem;
+                    }
+                }
+            }
+
+            #full-name {
+                text-transform: capitalize;
+            }
+
+            h1 {
+                @include text-gradient;
             }
         }
     }

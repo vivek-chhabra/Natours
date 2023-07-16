@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bacasime+Antique&family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&family=El+Messiri:wght@400;600;700;800;900;1000&family=Great+Vibes&family=Libre+Baskerville:wght@400;700&family=Lobster+Two:wght@400;700&family=Marcellus&family=Narnoor&family=Nunito:wght@200;300;400&family=Open+Sans:wght@300;400;500;600;700&family=Sacramento&family=Ysabeau+Infant:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bacasime+Antique&family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&family=El+Messiri:wght@400;600;700&family=Great+Vibes&family=Libre+Baskerville:wght@400;700&family=Lobster+Two:wght@400;700&family=Lumanosimo&family=Marcellus&family=Montserrat:wght@200;300;400;500;600&family=Mulish:wght@300;400;500;600&family=Narnoor&family=Nunito:wght@200;300;400&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600&family=Sacramento&family=Ysabeau+Infant:wght@200;300;400;500;600;700&display=swap");
 *,
 *::after,
 *::before {
@@ -13,7 +14,7 @@ html {
 
 body {
   padding: 30px;
-  font-family: "Marcellus", serif;
+  font-family: "Poppins", sans-serif;
   color: white;
   background-color: #ffffff; }
   body a {
@@ -37,7 +38,7 @@ body {
 
 /* utility classes end */
 .header {
-  background-image: linear-gradient(to right bottom, rgba(45, 51, 52, 0.8), rgba(0, 42, 43, 0.8)), url("./images//hero-small.jpg");
+  background-image: linear-gradient(to right bottom, rgba(47, 78, 84, 0.8), rgba(0, 42, 43, 0.8)), url("./images//hero-small.jpg");
   background-size: cover;
   background-position: top;
   height: 95vh;
@@ -152,7 +153,7 @@ main {
         cursor: default; }
     main .sec-1 .content {
       gap: 2rem;
-      font-weight: 800;
+      font-weight: 600;
       color: #004e50;
       font-size: 1.8rem;
       width: 100%;
@@ -171,7 +172,8 @@ main {
           display: flex;
           align-items: center;
           gap: 10px;
-          background-color: rgba(0, 0, 0, 0.491); }
+          background-color: rgba(0, 0, 0, 0.491);
+          font-weight: 500; }
           main .sec-1 .content .left .btn:hover {
             background: url(./images/nat-3.jpg);
             background-blend-mode: darken;
@@ -180,9 +182,9 @@ main {
             background-size: cover;
             cursor: pointer; }
       main .sec-1 .content .left .text {
-        color: #334F50;
-        font-size: 1.6rem;
-        font-weight: 500;
+        color: #426263;
+        font-size: 1.5rem;
+        font-weight: 400;
         letter-spacing: 1px;
         line-height: 2.2rem; }
       main .sec-1 .content .btn {
@@ -219,7 +221,7 @@ main {
   background-size: cover;
   height: 110vh !important;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to right bottom, rgba(45, 51, 52, 0.8), rgba(0, 42, 43, 0.8)), url("./images/nat-4.jpg");
+  background-image: linear-gradient(to right bottom, rgba(47, 78, 84, 0.8), rgba(0, 42, 43, 0.8)), url("./images/nat-4.jpg");
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%); }
   .features-section .container {
     gap: 5rem;
@@ -232,9 +234,9 @@ main {
       max-width: 25rem;
       background-color: white;
       text-align: center;
-      padding: 2.3rem 1.5rem;
+      padding: 2.3rem 2rem;
       border-radius: 5px;
-      height: 270px; }
+      height: 290px; }
       .features-section .container .feature i {
         font-size: 5rem;
         color: #0a767bfd;
@@ -245,7 +247,7 @@ main {
         font-weight: 800; }
       .features-section .container .feature .text {
         font-size: 1.5rem;
-        color: #334F50; }
+        color: #334f50; }
       .features-section .container .feature:hover {
         transform: translateY(-0.3rem) scale(1.03);
         cursor: default; }
@@ -407,14 +409,14 @@ main {
     .testimony-section .container .testimonies {
       gap: 5rem; }
       .testimony-section .container .testimonies #testimony-2 .img {
-        width: 37rem; }
+        width: 43.5rem; }
       .testimony-section .container .testimonies .testimony {
         height: 25rem;
         max-width: 80rem;
         gap: 2rem;
-        color: #0a757b;
+        color: #426263;
         font-size: 1.6rem;
-        font-weight: 800;
+        font-weight: 600;
         padding: 2.5rem 2rem;
         align-items: center;
         padding-inline: 5rem;
@@ -432,7 +434,7 @@ main {
           text-align: center;
           overflow: hidden;
           height: 14rem;
-          width: 28rem; }
+          width: 32.5rem; }
           .testimony-section .container .testimonies .testimony .img img {
             border-radius: 50%;
             width: 104rem;
@@ -454,6 +456,105 @@ main {
         .testimony-section .container .testimonies .testimony .text {
           justify-content: center;
           gap: 20px; }
+          .testimony-section .container .testimonies .testimony .text p {
+            font-weight: 400; }
           .testimony-section .container .testimonies .testimony .text .head {
             font-size: 1.8rem;
             color: #002a2b; }
+
+.booking-section {
+  height: 90vh;
+  margin-top: 5rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #2f4e54, #002a2b); }
+  .booking-section .container {
+    height: 80%;
+    background: url("./images/nat-4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    .booking-section .container .form {
+      height: 100%;
+      max-width: 60rem;
+      background-color: rgba(255, 255, 255, 0.842);
+      clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 3rem; }
+      .booking-section .container .form > * {
+        right: 4rem; }
+      .booking-section .container .form .for-name, .booking-section .container .form .for-email {
+        display: none; }
+      .booking-section .container .form .option-btn {
+        font-size: 1.6rem;
+        color: #002a2b;
+        font-weight: 600;
+        max-width: 40rem;
+        width: 100%;
+        justify-content: space-between; }
+      .booking-section .container .form label {
+        gap: 2rem;
+        justify-content: center;
+        align-items: center; }
+        .booking-section .container .form label input {
+          -ms-transform: scale(1.5);
+          /* IE 9 */
+          -webkit-transform: scale(1.5);
+          /* Chrome, Safari, Opera */
+          transform: scale(1.5); }
+      .booking-section .container .form input:not(:nth-child(1)) {
+        max-width: 40rem;
+        padding: 1.2rem 1.5rem;
+        width: 100%;
+        border: none;
+        border-bottom: 3px solid #0e353700;
+        outline: none;
+        font-size: 1.5rem; }
+        .booking-section .container .form input:not(:nth-child(1)):focus {
+          border-bottom: 3px solid #38626b; }
+      .booking-section .container .form .btn {
+        color: #ffffff !important;
+        background: linear-gradient(to right, #589697, #0a757b);
+        padding: 12px 20px 12px 20px;
+        width: fit-content;
+        font-size: 1.7rem;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.491);
+        width: 100%;
+        max-width: 40rem;
+        background: linear-gradient(to right, #589697fd, #0a767bfd);
+        margin-top: 3rem;
+        justify-content: center;
+        font-weight: 600; }
+        .booking-section .container .form .btn:hover {
+          background: url();
+          background-blend-mode: darken;
+          background-color: rgba(0, 0, 0, 0.491);
+          background-position: center;
+          background-size: cover;
+          cursor: pointer; }
+        .booking-section .container .form .btn:hover {
+          background: linear-gradient(to right, #589697fd, #0a767bfd); }
+          .booking-section .container .form .btn:hover i {
+            translate: 1rem; }
+      .booking-section .container .form #full-name {
+        text-transform: capitalize; }
+      .booking-section .container .form h1 {
+        font-weight: 800;
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+        width: fit-content;
+        margin-inline: auto;
+        background: linear-gradient(to right, #589697fd, #0a767bfd);
+        -webkit-background-clip: text;
+        color: transparent; }
+        .booking-section .container .form h1:hover {
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
+          cursor: default; }
