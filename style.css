@@ -558,3 +558,35 @@ main {
         .booking-section .container .form h1:hover {
           transform: skewY(2deg) skewX(15deg) scale(1.1);
           cursor: default; }
+
+.footer-section {
+  height: 70vh;
+  background-color: #242424;
+  justify-content: center;
+  font-size: 1.6rem;
+  padding-inline: 3rem; }
+  .footer-section .container {
+    justify-content: center;
+    align-items: center;
+    gap: 6rem; }
+    .footer-section .container a {
+      text-decoration: none;
+      color: #d1d1d1;
+      transition: all .2s ease; }
+      .footer-section .container a:hover {
+        scale: 1.05;
+        color: #8ef9ff; }
+    .footer-section .container .bottom {
+      gap: 3rem;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-start; }
+      .footer-section .container .bottom > * {
+        max-width: 47rem;
+        color: #d1d1d1; }
+      .footer-section .container .bottom .bottom-left hr {
+        margin-bottom: 2rem; }
+      .footer-section .container .bottom .bottom-left .links {
+        gap: 2rem; }
+      .footer-section .container .bottom .bottom-right hr {
+        margin-bottom: 2rem; }
