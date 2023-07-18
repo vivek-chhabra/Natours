@@ -487,7 +487,8 @@ main {
       padding: 2rem 3rem; }
       .booking-section .container .form > * {
         right: 4rem; }
-      .booking-section .container .form .for-name, .booking-section .container .form .for-email {
+      .booking-section .container .form .for-name,
+      .booking-section .container .form .for-email {
         display: none; }
       .booking-section .container .form .option-btn {
         font-size: 1.6rem;
@@ -572,7 +573,7 @@ main {
     .footer-section .container a {
       text-decoration: none;
       color: #d1d1d1;
-      transition: all .2s ease; }
+      transition: all 0.2s ease; }
       .footer-section .container a:hover {
         scale: 1.05;
         color: #8ef9ff; }
@@ -590,3 +591,93 @@ main {
         gap: 2rem; }
       .footer-section .container .bottom .bottom-right hr {
         margin-bottom: 2rem; }
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.929);
+  padding-inline: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+    .popup:target .container {
+      scale: 1; }
+  .popup i {
+    top: 1.7rem;
+    right: 2rem;
+    font-size: 2rem;
+    height: fit-content;
+    padding: 0.7rem 1rem;
+    border-radius: 50%; }
+    .popup i:hover {
+      cursor: pointer;
+      color: white !important;
+      background-color: #4e7d7f; }
+  .popup .container {
+    border-radius: 5px;
+    height: 50rem;
+    background-color: white;
+    color: #002a2b;
+    scale: .5; }
+    .popup .container .images {
+      width: 33rem; }
+      .popup .container .images > * {
+        height: 50%; }
+    .popup .container .content {
+      gap: 2rem;
+      justify-content: center;
+      color: #002a2b;
+      padding: 5rem;
+      font-size: 1.6rem; }
+      .popup .container .content h1 {
+        font-weight: 800;
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+        width: fit-content;
+        margin-inline: auto;
+        background: linear-gradient(to right, #589697fd, #0a767bfd);
+        -webkit-background-clip: text;
+        color: transparent;
+        float: left !important;
+        margin-inline: 0px;
+        margin-bottom: 2rem; }
+        .popup .container .content h1:hover {
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
+          cursor: default; }
+      .popup .container .content p {
+        color: #053c3d;
+        font-weight: 600; }
+      .popup .container .content .text {
+        gap: 3rem; }
+        .popup .container .content .text > * {
+          width: 100%;
+          font-size: 1.5rem; }
+      .popup .container .content .btn {
+        margin-top: 2rem;
+        color: #ffffff !important;
+        background: linear-gradient(to right, #589697, #0a757b);
+        padding: 12px 20px 12px 20px;
+        width: fit-content;
+        font-size: 1.7rem;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.491);
+        padding-inline: 3rem; }
+        .popup .container .content .btn:hover {
+          background: url(./images/nat-10.jpg);
+          background-blend-mode: darken;
+          background-color: rgba(0, 0, 0, 0.491);
+          background-position: center;
+          background-size: cover;
+          cursor: pointer; }
